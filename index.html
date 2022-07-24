@@ -25,6 +25,11 @@
     <title>Studio</title>
   </head>
   <body>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-x" data-modal-close>X</button>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <div class="navigation">
@@ -35,7 +40,9 @@
           <nav class="navigation">
             <ul class="navigation-links">
               <li class="navigation-links-item">
-                <a class="navigation-links-link" href="index.html">Agencja</a>
+                <a class="navigation-links-link active" href="index.html"
+                  >Agencja</a
+                >
               </li>
               <li class="navigation-links-item">
                 <a class="navigation-links-link" href="portfolio.html"
@@ -49,18 +56,22 @@
           </nav>
           <ul class="contact-links">
             <li class="contact-links-mail">
-              <svg class="contact-icon mail" width="16" height="12">
-                <use href="images/icomoon/sprite/icons.svg#icon-envelop"></use>
-              </svg>
-              <a class="mail-link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
+              <div class="contact-links-with-icon">
+                <svg class="contact-icon" width="16" height="12">
+                  <use
+                    href="images/icomoon/sprite/icons.svg#icon-envelop"
+                  ></use>
+                </svg>
+                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </div>
             </li>
             <li class="contact-links-phone">
-              <svg class="contact-icon phone" width="10" height="16">
-                <use href="images/icomoon/sprite/icons.svg#icon-mobile"></use>
-              </svg>
-              <a class="phone-link" href="tel.:+48111111111">+48 111 111 111</a>
+              <div class="contact-links-with-icon">
+                <svg class="contact-icon" width="10" height="16">
+                  <use href="images/icomoon/sprite/icons.svg#icon-mobile"></use>
+                </svg>
+                <a href="tel.:+48111111111">+48 111 111 111</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -71,7 +82,9 @@
             <h1 class="main-title-text">
               Efektywne rozwiązania dla waszego biznesu
             </h1>
-            <button type="button" class="main-button">Zamów usługę</button>
+            <button type="button" class="main-button" data-modal-open>
+              Zamów usługę
+            </button>
           </div>
         </div>
       </div>
@@ -149,11 +162,13 @@
           <ul class="description-images-list">
             <li class="description-images">
               <img
+                class="description-image"
                 src="images/programmmer_opt.jpg"
                 alt="Man is writing computer code"
                 width="370"
                 height="294"
               />
+              <p class="label">aplikacje komputerowe</p>
             </li>
             <li class="description-images">
               <img
@@ -162,6 +177,7 @@
                 width="370"
                 height="294"
               />
+              <p class="label">aplikacje mobilne</p>
             </li>
             <li class="description-images">
               <img
@@ -170,6 +186,7 @@
                 width="370"
                 height="294"
               />
+              <p class="label">rozwiązania graficzne</p>
             </li>
           </ul>
         </div>
@@ -463,5 +480,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/modal.js"></script>
   </body>
 </html>
